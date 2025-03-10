@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt" xml:lang="pt">
+
+<head>
+    <title>Elearning Marformar</title>
+    <link rel="shortcut icon" href="https://elearning.marformar.pt/theme/image.php/lambda/theme/1607956216/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="moodle, Elearning Marformar" />
+    <link rel="stylesheet" type="text/css"
+        href="https://elearning.marformar.pt/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" />
+    <script id="firstthemesheet"
+        type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script>
+    <link rel="stylesheet" type="text/css"
+        href="https://elearning.marformar.pt/theme/styles.php/lambda/1607956216_1/all" />
+    <script>
+        var M = {}; M.yui = {};
+        M.pageloadstarttime = new Date();
+        M.cfg = { "wwwroot": "https:\/\/elearning.marformar.pt", "sesskey": "TLDqJRUN6w", "sessiontimeout": "28800", "themerev": "1607956216", "slasharguments": 1, "theme": "lambda", "iconsystemmodule": "core\/icon_system_standard", "jsrev": "1607956216", "admin": "admin", "svgicons": true, "usertimezone": "Europe\/Lisbon", "contextid": 2, "langrev": 1738384205, "templaterev": "1607956216" }; var yui1ConfigFn = function (me) { if (/-skin|reset|fonts|grids|base/.test(me.name)) { me.type = 'css'; me.path = me.path.replace(/\.js/, '.css'); me.path = me.path.replace(/\/yui2-skin/, '/assets/skins/sam/yui2-skin') } };
+        var yui2ConfigFn = function (me) {
+            var parts = me.name.replace(/^moodle-/, '').split('-'), component = parts.shift(), module = parts[0], min = '-min'; if (/-(skin|core)$/.test(me.name)) { parts.pop(); me.type = 'css'; min = '' }
+            if (module) { var filename = parts.join('-'); me.path = component + '/' + module + '/' + filename + min + '.' + me.type } else { me.path = component + '/' + component + '.' + me.type }
+        };
+        YUI_config = { "debug": false, "base": "https:\/\/elearning.marformar.pt\/lib\/yuilib\/3.17.2\/", "comboBase": "https:\/\/elearning.marformar.pt\/theme\/yui_combo.php?", "combine": true, "filter": null, "insertBefore": "firstthemesheet", "groups": { "yui2": { "base": "https:\/\/elearning.marformar.pt\/lib\/yuilib\/2in3\/2.9.0\/build\/", "comboBase": "https:\/\/elearning.marformar.pt\/theme\/yui_combo.php?", "combine": true, "ext": false, "root": "2in3\/2.9.0\/build\/", "patterns": { "yui2-": { "group": "yui2", "configFn": yui1ConfigFn } } }, "moodle": { "name": "moodle", "base": "https:\/\/elearning.marformar.pt\/theme\/yui_combo.php?m\/1607956216\/", "combine": true, "comboBase": "https:\/\/elearning.marformar.pt\/theme\/yui_combo.php?", "ext": false, "root": "m\/1607956216\/", "patterns": { "moodle-": { "group": "moodle", "configFn": yui2ConfigFn } }, "filter": null, "modules": { "moodle-core-actionmenu": { "requires": ["base", "event", "node-event-simulate"] }, "moodle-core-blocks": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification"] }, "moodle-core-chooserdialogue": { "requires": ["base", "panel", "moodle-core-notification"] }, "moodle-core-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "event-key", "event-focus", "moodle-core-notification"] }, "moodle-core-event": { "requires": ["event-custom"] }, "moodle-core-formchangechecker": { "requires": ["base", "event-focus", "moodle-core-event"] }, "moodle-core-handlebars": { "condition": { "trigger": "handlebars", "when": "after" } }, "moodle-core-languninstallconfirm": { "requires": ["base", "node", "moodle-core-notification-confirm", "moodle-core-notification-alert"] }, "moodle-core-lockscroll": { "requires": ["plugin", "base-build"] }, "moodle-core-maintenancemodetimer": { "requires": ["base", "node"] }, "moodle-core-notification": { "requires": ["moodle-core-notification-dialogue", "moodle-core-notification-alert", "moodle-core-notification-confirm", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-core-notification-dialogue": { "requires": ["base", "node", "panel", "escape", "event-key", "dd-plugin", "moodle-core-widget-focusafterclose", "moodle-core-lockscroll"] }, "moodle-core-notification-alert": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-confirm": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-exception": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-notification-ajaxexception": { "requires": ["moodle-core-notification-dialogue"] }, "moodle-core-popuphelp": { "requires": ["moodle-core-tooltip"] }, "moodle-core-tooltip": { "requires": ["base", "node", "io-base", "moodle-core-notification-dialogue", "json-parse", "widget-position", "widget-position-align", "event-outside", "cache-base"] }, "moodle-core_availability-form": { "requires": ["base", "node", "event", "event-delegate", "panel", "moodle-core-notification-dialogue", "json"] }, "moodle-backup-backupselectall": { "requires": ["node", "event", "node-event-simulate", "anim"] }, "moodle-backup-confirmcancel": { "requires": ["node", "node-event-simulate", "moodle-core-notification-confirm"] }, "moodle-course-categoryexpander": { "requires": ["node", "event-key"] }, "moodle-course-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-course-coursebase", "moodle-course-util"] }, "moodle-course-formatchooser": { "requires": ["base", "node", "node-event-simulate"] }, "moodle-course-management": { "requires": ["base", "node", "io-base", "moodle-core-notification-exception", "json-parse", "dd-constrain", "dd-proxy", "dd-drop", "dd-delegate", "node-event-delegate"] }, "moodle-course-util": { "requires": ["node"], "use": ["moodle-course-util-base"], "submodules": { "moodle-course-util-base": {}, "moodle-course-util-section": { "requires": ["node", "moodle-course-util-base"] }, "moodle-course-util-cm": { "requires": ["node", "moodle-course-util-base"] } } }, "moodle-form-dateselector": { "requires": ["base", "node", "overlay", "calendar"] }, "moodle-form-passwordunmask": { "requires": [] }, "moodle-form-shortforms": { "requires": ["node", "base", "selector-css3", "moodle-core-event"] }, "moodle-question-chooser": { "requires": ["moodle-core-chooserdialogue"] }, "moodle-question-preview": { "requires": ["base", "dom", "event-delegate", "event-key", "core_question_engine"] }, "moodle-question-searchform": { "requires": ["base", "node"] }, "moodle-availability_completion-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_date-form": { "requires": ["base", "node", "event", "io", "moodle-core_availability-form"] }, "moodle-availability_grade-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_group-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_grouping-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-availability_profile-form": { "requires": ["base", "node", "event", "moodle-core_availability-form"] }, "moodle-mod_assign-history": { "requires": ["node", "transition"] }, "moodle-mod_quiz-autosave": { "requires": ["base", "node", "event", "event-valuechange", "node-event-delegate", "io-form"] }, "moodle-mod_quiz-dragdrop": { "requires": ["base", "node", "io", "dom", "dd", "dd-scroll", "moodle-core-dragdrop", "moodle-core-notification", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-base", "moodle-mod_quiz-util-page", "moodle-mod_quiz-util-slot", "moodle-course-util"] }, "moodle-mod_quiz-modform": { "requires": ["base", "node", "event"] }, "moodle-mod_quiz-questionchooser": { "requires": ["moodle-core-chooserdialogue", "moodle-mod_quiz-util", "querystring-parse"] }, "moodle-mod_quiz-quizbase": { "requires": ["base", "node"] }, "moodle-mod_quiz-toolboxes": { "requires": ["base", "node", "event", "event-key", "io", "moodle-mod_quiz-quizbase", "moodle-mod_quiz-util-slot", "moodle-core-notification-ajaxexception"] }, "moodle-mod_quiz-util": { "requires": ["node", "moodle-core-actionmenu"], "use": ["moodle-mod_quiz-util-base"], "submodules": { "moodle-mod_quiz-util-base": {}, "moodle-mod_quiz-util-slot": { "requires": ["node", "moodle-mod_quiz-util-base"] }, "moodle-mod_quiz-util-page": { "requires": ["node", "moodle-mod_quiz-util-base"] } } }, "moodle-message_airnotifier-toolboxes": { "requires": ["base", "node", "io"] }, "moodle-filter_glossary-autolinker": { "requires": ["base", "node", "io-base", "json-parse", "event-delegate", "overlay", "moodle-core-event", "moodle-core-notification-alert", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-filter_mathjaxloader-loader": { "requires": ["moodle-core-event"] }, "moodle-editor_atto-editor": { "requires": ["node", "transition", "io", "overlay", "escape", "event", "event-simulate", "event-custom", "node-event-html5", "node-event-simulate", "yui-throttle", "moodle-core-notification-dialogue", "moodle-core-notification-confirm", "moodle-editor_atto-rangy", "handlebars", "timers", "querystring-stringify"] }, "moodle-editor_atto-plugin": { "requires": ["node", "base", "escape", "event", "event-outside", "handlebars", "event-custom", "timers", "moodle-editor_atto-menu"] }, "moodle-editor_atto-menu": { "requires": ["moodle-core-notification-dialogue", "node", "event", "event-custom"] }, "moodle-editor_atto-rangy": { "requires": [] }, "moodle-report_eventlist-eventfilter": { "requires": ["base", "event", "node", "node-event-delegate", "datatable", "autocomplete", "autocomplete-filters"] }, "moodle-report_loglive-fetchlogs": { "requires": ["base", "event", "node", "io", "node-event-delegate"] }, "moodle-gradereport_grader-gradereporttable": { "requires": ["base", "node", "event", "handlebars", "overlay", "event-hover"] }, "moodle-gradereport_history-userselector": { "requires": ["escape", "event-delegate", "event-key", "handlebars", "io-base", "json-parse", "moodle-core-notification-dialogue"] }, "moodle-tool_capability-search": { "requires": ["base", "node"] }, "moodle-tool_lp-dragdrop-reorder": { "requires": ["moodle-core-dragdrop"] }, "moodle-tool_monitor-dropdown": { "requires": ["base", "event", "node"] }, "moodle-assignfeedback_editpdf-editor": { "requires": ["base", "event", "node", "io", "graphics", "json", "event-move", "event-resize", "transition", "querystring-stringify-simple", "moodle-core-notification-dialog", "moodle-core-notification-alert", "moodle-core-notification-warning", "moodle-core-notification-exception", "moodle-core-notification-ajaxexception"] }, "moodle-atto_accessibilitychecker-button": { "requires": ["color-base", "moodle-editor_atto-plugin"] }, "moodle-atto_accessibilityhelper-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_align-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_bold-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_charmap-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_clear-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_collapse-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_emojipicker-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_emoticon-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_equation-button": { "requires": ["moodle-editor_atto-plugin", "moodle-core-event", "io", "event-valuechange", "tabview", "array-extras"] }, "moodle-atto_h5p-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_html-beautify": {}, "moodle-atto_html-button": { "requires": ["promise", "moodle-editor_atto-plugin", "moodle-atto_html-beautify", "moodle-atto_html-codemirror", "event-valuechange"] }, "moodle-atto_html-codemirror": { "requires": ["moodle-atto_html-codemirror-skin"] }, "moodle-atto_image-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_indent-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_italic-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_link-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_managefiles-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_managefiles-usedfiles": { "requires": ["node", "escape"] }, "moodle-atto_media-button": { "requires": ["moodle-editor_atto-plugin", "moodle-form-shortforms"] }, "moodle-atto_noautolink-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_orderedlist-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_recordrtc-button": { "requires": ["moodle-editor_atto-plugin", "moodle-atto_recordrtc-recording"] }, "moodle-atto_recordrtc-recording": { "requires": ["moodle-atto_recordrtc-button"] }, "moodle-atto_rtl-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_strike-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_subscript-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_superscript-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_table-button": { "requires": ["moodle-editor_atto-plugin", "moodle-editor_atto-menu", "event", "event-valuechange"] }, "moodle-atto_title-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_underline-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_undo-button": { "requires": ["moodle-editor_atto-plugin"] }, "moodle-atto_unorderedlist-button": { "requires": ["moodle-editor_atto-plugin"] } } }, "gallery": { "name": "gallery", "base": "https:\/\/elearning.marformar.pt\/lib\/yuilib\/gallery\/", "combine": true, "comboBase": "https:\/\/elearning.marformar.pt\/theme\/yui_combo.php?", "ext": false, "root": "gallery\/1607956216\/", "patterns": { "gallery-": { "group": "gallery" } } } }, "modules": { "core_filepicker": { "name": "core_filepicker", "fullpath": "https:\/\/elearning.marformar.pt\/lib\/javascript.php\/1607956216\/repository\/filepicker.js", "requires": ["base", "node", "node-event-simulate", "json", "async-queue", "io-base", "io-upload-iframe", "io-form", "yui2-treeview", "panel", "cookie", "datatable", "datatable-sort", "resize-plugin", "dd-plugin", "escape", "moodle-core_filepicker", "moodle-core-notification-dialogue"] }, "core_comment": { "name": "core_comment", "fullpath": "https:\/\/elearning.marformar.pt\/lib\/javascript.php\/1607956216\/comment\/comment.js", "requires": ["base", "io-base", "node", "json", "yui2-animation", "overlay", "escape"] }, "mathjax": { "name": "mathjax", "fullpath": "https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured" } } };
+        M.yui.loader = { modules: {} };
+
+    </script>
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="https://elearning.marformar.pt/theme/lambda/style/nojs.css" />
+    </noscript>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400%7COpen+Sans:700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin="anonymous">
+</head>
+
+<body id="page-site-index"
+    class="format-site course path-site chrome dir-ltr lang-pt yui-skin-sam yui3-skin-sam elearning-marformar-pt pagelayout-frontpage course-1 context-2 notloggedin has-region-side-pre has-region-side-post used-region-side-pre empty-region-side-post blockstyle-02">
+
+    <div>
+        <a class="sr-only sr-only-focusable" href="#maincontent">Ir para o conteúdo principal</a>
+    </div>
+    <script
+        src="https://elearning.marformar.pt/lib/javascript.php/1607956216/lib/babel-polyfill/polyfill.min.js"></script>
+    <script src="https://elearning.marformar.pt/lib/javascript.php/1607956216/lib/polyfills/polyfill.js"></script>
+    <script src="https://elearning.marformar.pt/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script>
+    <script src="https://elearning.marformar.pt/theme/jquery.php/core/jquery-3.4.1.min.js"></script>
+    <script src="https://elearning.marformar.pt/theme/jquery.php/theme_lambda/jquery.easing.min.1.4.js"></script>
+    <script src="https://elearning.marformar.pt/theme/jquery.php/theme_lambda/slideshow.js"></script>
+    <script src="https://elearning.marformar.pt/theme/jquery.php/theme_lambda/carousel.js"></script>
+    <script src="https://elearning.marformar.pt/lib/javascript.php/1607956216/lib/javascript-static.js"></script>
+    <script>
+        
+        document.body.className += ' jsenabled';
+    </script>
+
+
+
+    <div id="wrapper">
+
+
+        <header id="page-header" class="clearfix">
+            <div class="container-fluid">
+                <div class="row-fluid">
+
+                    <div class="span6">
+                        <div class="logo-header">
+                            <a class="logo" href="https://elearning.marformar.pt" title="Página principal">
+                                <img src="https://elearning.marformar.pt/pluginfile.php/1/theme_lambda/logo/1607956216/Logo2_ok.png"
+                                    class="img-responsive" alt="logo" /> </a>
+                        </div>
+                    </div>
+
+
+                    <div class="span6 login-header">
+                        <div class="profileblock">
+
+
+                            <form class="navbar-form pull-right" method="post"
+                                action="https://elearning.marformar.pt/login/index.php">
+                                <div id="block-login">
+                                    <div id="user"><i class="fas fa-user"></i></div>
+                                    <label for="inputName" class="lambda-sr-only">Nome de utilizador</label>
+                                    <input type="hidden" name="logintoken" value="xebOomkhokOP9TEgjXBEowHdgttpC3cb" />
+                                    <input id="inputName" class="span2" type="text" name="username"
+                                        placeholder="Nome de utilizador">
+                                    <div id="pass"><i class="fas fa-unlock-alt"></i></div>
+                                    <label for="inputPassword" class="lambda-sr-only">Senha</label>
+                                    <input id="inputPassword" class="span2" type="password" name="password"
+                                        placeholder="Senha">
+                                    <button type="submit" id="submit"><span
+                                            class="lambda-sr-only">Entrar</span></button>
+                                </div>
+
+                                <div class="forgotpass">
+                                    <a target="_self"
+                                        href="https://elearning.marformar.pt/login/forgot_password.php">Esqueceu-se do
+                                        seu nome de utilizador ou da senha?</a>
+
+                                </div>
+
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <header class="navbar">
+            <nav class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="brand" href="https://127.0.0.1:5500/Gustavo/Formar+.html">Marformar</a> <a
+                        class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <ul class="nav">
+                                <li><a href="https://127.0.0.1:5500/Gustavo/Formar+.html">Início</a></li>
+                                <li class="divider">&nbsp;</li>
+                                <li><a href="https://127.0.0.1:5500/Gustavo/INICIAL.html ">Site MARFORMAR</a></li>
+                                <li class="divider">&nbsp;</li>
+                                <li class="dropdown"><a href="#cm_submenu_1" class="dropdown-toggle"
+                                        data-toggle="dropdown">Disciplinas<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://elearning.marformar.pt/course/">Todas as disciplinas</a>
+                                        </li>
+                                        <li><a href="https://elearning.marformar.pt/course/search.php">Procurar
+                                                disciplina</a></li>
+                                    </ul>
+                                <li class="dropdown langmenu"><a href="" class="dropdown-toggle" data-toggle="dropdown"
+                                        title="Language">English ‎(en)‎<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a title="English ‎(en)‎"
+                                                href="https://elearning.marformar.pt/?lang=en">English ‎(en)‎</a></li>
+                                        <li><a title="Português - Portugal ‎(pt)‎"
+                                                href="https://elearning.marformar.pt/?lang=pt">Português - Portugal
+                                                ‎(pt)‎</a></li>
+                                    </ul>
+                            </ul>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li></li>
+                        </ul>
+
+
+                        <form id="search" action="https://elearning.marformar.pt/course/search.php">
+                            <label for="coursesearchbox" class="lambda-sr-only">Pesquisar disciplinas</label>
+                            <input id="coursesearchbox" type="text"
+                                onFocus="if(this.value =='Pesquisar disciplinas' ) this.value=''"
+                                onBlur="if(this.value=='') this.value='Pesquisar disciplinas'"
+                                value="Pesquisar disciplinas" name="search">
+                            <button type="submit"><span class="lambda-sr-only">Submeter</span></button>
+                        </form>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-fluid" style="background: #fff;"><img
+                src="https://elearning.marformar.pt/theme/image.php/lambda/theme/1607956216/bg/lambda-shadow"
+                class="lambda-shadow" alt=""></div>
+
+        <div class="camera_wrap camera_emboss " id="camera_wrap">
+
+            <div
+                data-src="https://elearning.marformar.pt/pluginfile.php/1/theme_lambda/slide1image/1607956216/successo2.jpg">
+                <div class="camera_caption moveFromRight">
+                    <span>O SEU SUCESSO COMEÇA AQUI </span>
+                </div>
+            </div>
+
+            <div
+                data-src="https://elearning.marformar.pt/pluginfile.php/1/theme_lambda/slide2image/1607956216/escrit%C3%B3rios.jpg">
+                <div class="camera_caption moveFromRight">
+                    <span>ONDE ESTIVER </span>
+                </div>
+            </div>
+
+            <div
+                data-src="https://elearning.marformar.pt/pluginfile.php/1/theme_lambda/slide3image/1607956216/SLIDE%202.jpg">
+                <div class="camera_caption moveFromRight">
+                    <span>LEVAMOS A FORMAÇÃO ATÉ SI </span>
+                </div>
+            </div>
+
+            <div
+                data-src="//elearning.marformar.pt/pluginfile.php/1/theme_lambda/slide4image/1607956216/slide_3%20%282%29.png">
+                <div class="camera_caption moveFromRight">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container-fluid"><img
+                src="https://elearning.marformar.pt/theme/image.php/lambda/theme/1607956216/bg/lambda-shadow"
+                class="lambda-shadow" alt=""></div>
+
+
+        <div id="page" class="container-fluid">
+            <div id="page-header-nav" class="clearfix"> </div>
+            <div id="page-content" class="row-fluid">
+                <div id="region-bs-main-and-pre" class="span9">
+                    <div class="row-fluid">
+                        <section id="region-main" class="span8 pull-right">
+                            <span class="notifications" id="user-notifications"></span>
+                            <div role="main"><span id="maincontent"></span>
+                                <div class="box py-3 generalbox sitetopic">
+                                    <div class="no-overflow">
+                                        <h4 style="text-align: left;"></h4>
+                                        <h4>
+                                            <p style="text-align: left;"></p>
+                                        </h4>
+                                        <h4 style="text-align: center;"><span style="font-weight: normal;">A
+                                                Equipa MARFORMAR dá-lhe as boas-vindas à nossa Plataforma de Formação a
+                                                Distância.</span></h4>
+                                        <h4 style="text-align: center;"><span
+                                                style="font-weight: normal;"><br></span><span
+                                                style="font-weight: normal;"> Durante
+                                                o seu percurso estaremos ao seu dispor para lhe prestar todo o apoio
+                                                necessário, para que esta seja uma excelente experiência formativa e
+                                                possa alcançar os
+                                                objetivos da mesma com sucesso.</span></h4>
+                                        <h4 style="text-align: center;"><span
+                                                style="font-weight: normal;"><br></span><span
+                                                style="font-weight: normal;">Bom
+                                                trabalho!</span></h4>
+
+
+
+                                        <br>
+                                        <p></p>
+                                    </div>
+                                    <ul class="section img-text"></ul>
+                                </div><a class="skip-block skip aabtn" href="#skipcategories">Ignorar categorias de
+                                    disciplinas</a>
+                                <div id="frontpage-category-names">
+                                    <h2>Categorias de disciplinas</h2>
+                                    <div class="course_category_tree clearfix frontpage-category-names">
+                                        <div class="collapsible-actions"><a class="collapseexpand aabtn collapse-all"
+                                                href="#">Contrair tudo</a></div>
+                                        <div class="content">
+                                            <div class="subcategories">
+                                                <div class="category loaded" data-categoryid="82" data-depth="1"
+                                                    data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=82">CIÊNCIAS
+                                                                INFORMÁTICAS</a><span title="Número de disciplinas"
+                                                                class="numberofcourse"> (1)</span></h3>
+                                                    </div>
+                                                    <div class="content"></div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="81"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=81">COMÉRCIO</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="85"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=85">Curso
+                                                                            |Excelência no Atendimento ao
+                                                                            Cliente</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="80"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=80">CUIDADOS
+                                                                DE BELEZA</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="84"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=84">Curso
+                                                                            | Design de sobrancelhas</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="35"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=35">Curso
+                                                                de Técnico/a de Desporto </a><span
+                                                                title="Número de disciplinas" class="numberofcourse">
+                                                                (1)</span></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded with_children"
+                                                                data-categoryid="39" data-depth="2" data-showcourses="5"
+                                                                data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=39">TD7</a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <div class="subcategories">
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="55" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=55">3º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (20)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="category loaded with_children"
+                                                                data-categoryid="40" data-depth="2" data-showcourses="5"
+                                                                data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=40">TD8</a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <div class="subcategories">
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="58" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=58">3º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (20)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="category loaded with_children"
+                                                                data-categoryid="41" data-depth="2" data-showcourses="5"
+                                                                data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=41">TD9</a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <div class="subcategories">
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="60" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=60">2º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (21)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="61" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=61">3º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (20)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="category loaded with_children"
+                                                                data-categoryid="42" data-depth="2" data-showcourses="5"
+                                                                data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=42">TD10</a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <div class="subcategories">
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="63" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=63">2º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (21)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="64" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=64">3º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (20)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="category loaded with_children"
+                                                                data-categoryid="126" data-depth="2"
+                                                                data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=126">TD11</a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <div class="subcategories">
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="127" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=127">1º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (30)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="category loaded with_children"
+                                                                data-categoryid="128" data-depth="2"
+                                                                data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=128">TD12</a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <div class="subcategories">
+                                                                        <div class="category loaded"
+                                                                            data-categoryid="129" data-depth="3"
+                                                                            data-showcourses="5" data-type="0">
+                                                                            <div class="info">
+                                                                                <h4 class="categoryname aabtn"><a
+                                                                                        href="https://elearning.marformar.pt/course/index.php?categoryid=129">1º
+                                                                                        Período</a><span
+                                                                                        title="Número de disciplinas"
+                                                                                        class="numberofcourse">
+                                                                                        (30)</span></h4>
+                                                                            </div>
+                                                                            <div class="content"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="75"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=75">DESENVOLVIMENTO
+                                                                PESSOAL</a><span title="Número de disciplinas"
+                                                                class="numberofcourse"> (1)</span></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="95"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=95">Curso
+                                                                            | Comunicação eficaz e gestão de
+                                                                            conflitos</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="96"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=96">Curso
+                                                                            | Gestão do stress</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="97"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=97">Curso
+                                                                            | Liderança e Gestão de Equipas</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="130"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=130">Curso
+                                                                            | Gestão emocional em contexto
+                                                                            laboral</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded" data-categoryid="78" data-depth="1"
+                                                    data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=78">DESPORTO</a><span
+                                                                title="Número de disciplinas" class="numberofcourse">
+                                                                (1)</span></h3>
+                                                    </div>
+                                                    <div class="content"></div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="74"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=74">ELETRICIDADE
+                                                                E ENERGIA</a><span title="Número de disciplinas"
+                                                                class="numberofcourse"> (1)</span></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="93"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=93">Curso
+                                                                            |Instalação e manutenção de carregadores de
+                                                                            veículos elétricos</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="72"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=72">GESTÃO
+                                                                E ADMINISTRAÇÃO</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="89"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=89">Curso
+                                                                            | Gestão e organização do tempo</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="91"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=91">Curso
+                                                                            | Trabalhar remotamente - Técnicas de
+                                                                            autogestão</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (2)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="90"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=90">Curso
+                                                                            |Planeamento e Gestão da Formação na
+                                                                            Empresa</a></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="94"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=94">Curso|
+                                                                            Branqueamento de capitais e produtos
+                                                                            financeiros</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="92"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=92">Curso|
+                                                                            Gestão e administração de
+                                                                            condomínios</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="79"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=79">HIGIENE
+                                                                E SEGURANÇA DO TRABALHO</a><span
+                                                                title="Número de disciplinas" class="numberofcourse">
+                                                                (5)</span></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="88"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=88">Curso
+                                                                            | Segurança em Atmosferas Explosivas
+                                                                            (ATEX)</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="120"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=120">Curso
+                                                                            | Diretiva Seveso III</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="122"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=122">Curso
+                                                                            | Combate a Incêndios e Evacuação de
+                                                                            Pessoas</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="132"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=132">Higiene
+                                                                            e Segurança no Trabalho - Noções
+                                                                            Básicas</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="83"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=83">HOTELARIA
+                                                                E RESTAURAÇÃO</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="87"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=87">Curso
+                                                                            | Segurança Alimentar na
+                                                                            Restauração</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="71"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=71">PRODUÇÃO
+                                                                AGRÍCOLA E ANIMAL</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="76"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=76">Curso
+                                                                            |Gestão da Empresa Agrícola</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="65"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=65">SAÚDE</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="99"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=99">Curso
+                                                                            | Alimentação e nutrição do idoso no
+                                                                            domicílio</a></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="69"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=69">Curso
+                                                                            | Cuidados Paliativos</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="66"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=66">Curso
+                                                                            | Noções Básicas de Primeiros
+                                                                            Socorros</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                            <div class="category loaded" data-categoryid="68"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=68">Curso
+                                                                            |Cuidados ao idoso em Contexto
+                                                                            Familiar</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="73"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=73">TRABALHO
+                                                                SOCIAL E ORIENTAÇÃO</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="98"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=98">Curso
+                                                                            | Técnico de Apoio à Vítima</a></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="104"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=104">TRANSPORTES</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="109"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=109">Curso
+                                                                            | Acolhimento do motorista de
+                                                                            pesados</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="105"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=105">TURISMO
+                                                                E LAZER</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="110"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=110">Curso
+                                                                            | Animação Turística</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="106"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=106">MARKETING
+                                                                E PUBLICIDADE</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="111"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=111">Curso
+                                                                            | Técnicas de Marketing nas
+                                                                            organizações</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="107"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=107">FORMAÇÃO
+                                                                PROFESSORES E FORMADORES ÁREA TECNOLÓGICA</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="112"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=112">Curso
+                                                                            | Operacionalização da Formação – do plano à
+                                                                            ação</a><span title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded with_children" data-categoryid="108"
+                                                    data-depth="1" data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=108">INDÚSTRIA
+                                                                DE TÊXTIL VESTUÁRIO E CALÇADO</a></h3>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="subcategories">
+                                                            <div class="category loaded" data-categoryid="113"
+                                                                data-depth="2" data-showcourses="5" data-type="0">
+                                                                <div class="info">
+                                                                    <h4 class="categoryname aabtn"><a
+                                                                            href="https://elearning.marformar.pt/course/index.php?categoryid=113">Curso
+                                                                            | Gestão da qualidade na indústria
+                                                                            têxtil</a><span
+                                                                            title="Número de disciplinas"
+                                                                            class="numberofcourse"> (1)</span></h4>
+                                                                </div>
+                                                                <div class="content"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="category loaded" data-categoryid="133" data-depth="1"
+                                                    data-showcourses="5" data-type="0">
+                                                    <div class="info">
+                                                        <h3 class="categoryname aabtn"><a
+                                                                href="https://elearning.marformar.pt/course/index.php?categoryid=133">GREEN
+                                                                SKILLS</a><span title="Número de disciplinas"
+                                                                class="numberofcourse"> (8)</span></h3>
+                                                    </div>
+                                                    <div class="content"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><span class="skip-block-to" id="skipcategories"></span><br />
+                            </div>
+                        </section>
+                        <aside id="block-region-side-pre" class="span4 desktop-first-column pull-left block-region"
+                            data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1"
+                                class="sr-only sr-only-focusable">Ignorar Últimos anúncios</a>
+
+                            <section id="inst26" class=" block_news_items block  card mb-3" role="complementary"
+                                data-block="news_items" aria-labelledby="instance-26-header">
+
+                                <div class="card-body p-3">
+
+                                    <h5 id="instance-26-header" class="card-title d-inline">Últimos anúncios</h5>
+
+
+                                    <div class="card-text content mt-3">
+                                        (Ainda não foram publicados anúncios)
+                                        <div class="footer"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                            <span id="sb-1"></span><a href="#sb-3" class="sr-only sr-only-focusable">Ignorar Atividade
+                                recente</a>
+
+                            <section id="inst448" class=" block_recent_activity block  card mb-3" role="complementary"
+                                data-block="recent_activity" aria-labelledby="instance-448-header">
+
+                                <div class="card-body p-3">
+
+                                    <h5 id="instance-448-header" class="card-title d-inline">Atividade recente</h5>
+
+
+                                    <div class="card-text content mt-3">
+                                        <div class="activityhead">Atividade desde Segunda, 3 de Março de 2025 às 10:00
+                                        </div>
+                                        <div class="activityhead mb-3"><a
+                                                href="https://elearning.marformar.pt/course/recent.php?id=1">Relatório
+                                                completo da atividade recente</a></div>
+                                        <p class="message">Sem atividade recente</p>
+                                        <div class="footer"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                            <span id="sb-3"></span>
+                        </aside>
+                    </div>
+                </div>
+                <aside id="block-region-side-post" class="span3 block-region" data-blockregion="side-post"
+                    data-droptarget="1"></aside>
+            </div>
+
+
+            <a href="#top" class="back-to-top"><i class="fa fa-chevron-circle-up fa-3x"></i><span
+                    class="lambda-sr-only">Voltar</span></a>
+
+        </div>
+        <footer id="page-footer" class="container-fluid">
+            <div class="row-fluid">
+                <aside id="block-region-footer-left" class="span4 block-region" data-blockregion="footer-left"
+                    data-droptarget="1"><a href="#sb-4" class="sr-only sr-only-focusable">Ignorar Localização |
+                        Contactos</a>
+
+                    <section id="inst55" class=" block_html block  card mb-3" role="complementary" data-block="html"
+                        aria-labelledby="instance-55-header">
+
+                        <div class="card-body p-3">
+
+                            <h5 id="instance-55-header" class="card-title d-inline">Localização | Contactos</h5>
+
+
+                            <div class="card-text content mt-3">
+                                <div class="no-overflow">
+                                    <h5><span style="font-weight: normal;"><a
+                                                href="https://goo.gl/maps/T4ktR3Zxf31xeuXw9" target="_blank"><img
+                                                    src="https://elearning.marformar.pt/pluginfile.php/81/block_html/content/LOGOMAR%20%28002%29.png"
+                                                    alt="" width="175" height="134" role="presentation"
+                                                    class="atto_image_button_text-top"></a><span style=""><span
+                                                    style=""><span style=""></span></span></span></span></h5>
+                                    <p><span><span style=""><span style=""><span style=""><strong>MARFORMAR| Formação
+                                                            profissional e Consultadoria,
+                                                            Lda.</strong><br></span></span></span><span style=""><span
+                                                    style=""><span>Rua Raimundo de Carvalho,
+                                                        266<br></span></span></span>4430-185 Vila Nova de Gaia</span>
+                                    </p>
+                                    <p>&nbsp;223 753 369 | 925 605&nbsp;656</p>
+                                    <p><span style="font-weight: normal;">
+
+                                            <br></span></p>
+                                    <p></p>
+                                    <p dir="ltr" style="text-align: left;"><span>
+
+
+
+                                            <br></span></p>
+                                </div>
+                                <div class="footer"></div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <span id="sb-4"></span>
+                </aside>
+                <aside id="block-region-footer-middle" class="span4 block-region" data-blockregion="footer-middle"
+                    data-droptarget="1"><a href="#sb-5" class="sr-only sr-only-focusable">Ignorar Certificações</a>
+
+                    <section id="inst54" class=" block_html block  card mb-3" role="complementary" data-block="html"
+                        aria-labelledby="instance-54-header">
+
+                        <div class="card-body p-3">
+
+                            <h5 id="instance-54-header" class="card-title d-inline">Certificações</h5>
+
+
+                            <div class="card-text content mt-3">
+                                <div class="no-overflow">
+                                    <h5 style="text-align: left;">&nbsp;<img
+                                            src="https://elearning.marformar.pt/pluginfile.php/80/block_html/content/dgert.png?time=1603212110809"
+                                            alt="" width="120" height="71" role="presentation"
+                                            class="img-responsive atto_image_button_text-bottom">&nbsp; &nbsp;&nbsp;
+                                    </h5>
+                                    <h5 style="text-align: left;">&nbsp; &nbsp; &nbsp;&nbsp;<img
+                                            src="https://elearning.marformar.pt/pluginfile.php/80/block_html/content/Logo%20IPDJ%20Horizontal%20Cores%20Letras%20Branca.png"
+                                            alt="" width="250" height="64" role="presentation"
+                                            class="img-responsive atto_image_button_text-bottom"
+                                            style="color: rgb(51, 51, 51); font-size: 13px; font-weight: 400;"></h5>
+                                </div>
+                                <div class="footer"></div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <span id="sb-5"></span>
+                </aside>
+                <aside id="block-region-footer-right" class="span4 block-region" data-blockregion="footer-right"
+                    data-droptarget="1"><a href="#sb-6" class="sr-only sr-only-focusable">Ignorar Calendário</a>
+
+                    <section id="inst25" class=" block_calendar_month block  card mb-3" role="complementary"
+                        data-block="calendar_month" aria-labelledby="instance-25-header">
+
+                        <div class="card-body p-3">
+
+                            <h5 id="instance-25-header" class="card-title d-inline">Calendário</h5>
+
+
+                            <div class="card-text content mt-3">
+                                <div id="calendar-month-2025-March-67c820c5d90ae67c820c5d90b11"
+                                    data-template="core_calendar/month_mini" data-includenavigation="false"
+                                    data-mini="true">
+                                    <div id="month-mini-2025-March-67c820c5d90ae67c820c5d90b11" class="calendarwrapper"
+                                        data-courseid="1" data-categoryid="0" data-month="3" data-year="2025"
+                                        data-day="5" data-view="month">
+                                        <span class="overlay-icon-container hidden"
+                                            data-region="overlay-icon-container">
+                                            <span class="loading-icon icon-no-margin"><img class="icon "
+                                                    alt="A carregar" title="A carregar"
+                                                    src="https://elearning.marformar.pt/theme/image.php/lambda/core/1607956216/i/loading" /></span>
+                                        </span>
+                                        <table class="minicalendar calendartable">
+                                            <caption class="calendar-controls">
+                                                <h3>
+                                                    <a href="https://elearning.marformar.pt/calendar/view.php?view=month&time=1741168837"
+                                                        title="Este mês">Março de 2025</a>
+                                                </h3>
+                                            </caption>
+                                            <thead>
+                                                <tr>
+                                                    <th class="header text-xs-center">
+                                                        <span class="sr-only">Segunda</span>
+                                                        <span aria-hidden="true">Seg</span>
+                                                    </th>
+                                                    <th class="header text-xs-center">
+                                                        <span class="sr-only">Terça</span>
+                                                        <span aria-hidden="true">Ter</span>
+                                                    </th>
+                                                    <th class="header text-xs-center">
+                                                        <span class="sr-only">Quarta</span>
+                                                        <span aria-hidden="true">Qua</span>
+                                                    </th>
+                                                    <th class="header text-xs-center">
+                                                        <span class="sr-only">Quinta</span>
+                                                        <span aria-hidden="true">Qui</span>
+                                                    </th>
+                                                    <th class="header text-xs-center">
+                                                        <span class="sr-only">Sexta</span>
+                                                        <span aria-hidden="true">Sex</span>
+                                                    </th>
+                                                    <th class="header text-xs-center">
+                                                        <span class="sr-only">Sábado</span>
+                                                        <span aria-hidden="true">Sab</span>
+                                                    </th>
+                                                    <th class="header text-xs-center">
+                                                        <span class="sr-only">Domingo</span>
+                                                        <span aria-hidden="true">Dom</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-region="month-view-week">
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1740787200">
+                                                        <span class="sr-only">Sem eventos, Sábado, 1 de Março</span>
+
+                                                        <span aria-hidden="true">1</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1740873600">
+                                                        <span class="sr-only">Sem eventos, Domingo, 2 de Março</span>
+
+                                                        <span aria-hidden="true">2</span>
+                                                    </td>
+                                                </tr>
+                                                <tr data-region="month-view-week">
+                                                    <td class="day text-center" data-day-timestamp="1740960000"><span
+                                                            class="sr-only">Sem eventos, Segunda, 3 de Março</span>
+
+                                                        <span aria-hidden="true">3</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1741046400"><span
+                                                            class="sr-only">Sem eventos, Terça, 4 de Março</span>
+
+                                                        <span aria-hidden="true">4</span>
+                                                    </td>
+                                                    <td class="day text-center today" data-day-timestamp="1741132800">
+                                                        <span class="sr-only">Sem eventos, Quarta, 5 de Março</span>
+                                                        <a id="calendar-day-popover-link-1-2025-63-67c820c5d90ae67c820c5d90b11"
+                                                            href="https://elearning.marformar.pt/calendar/view.php?view=day&amp;time=1741132800"
+                                                            data-container="body" data-toggle="popover" data-html="true"
+                                                            data-region="mini-day-link" data-trigger="hover focus"
+                                                            data-placement="top" data-year="2025" data-month="3"
+                                                            data-courseid="1" data-categoryid="0"
+                                                            data-title="Hoje Quarta, 5 de Março"
+                                                            data-alternate="Sem eventos"
+                                                            aria-label="Hoje Quarta, 5 de Março">5</a>
+                                                        <div class="hidden">
+
+                                                        </div>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1741219200"><span
+                                                            class="sr-only">Sem eventos, Quinta, 6 de Março</span>
+
+                                                        <span aria-hidden="true">6</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1741305600"><span
+                                                            class="sr-only">Sem eventos, Sexta, 7 de Março</span>
+
+                                                        <span aria-hidden="true">7</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1741392000">
+                                                        <span class="sr-only">Sem eventos, Sábado, 8 de Março</span>
+
+                                                        <span aria-hidden="true">8</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1741478400">
+                                                        <span class="sr-only">Sem eventos, Domingo, 9 de Março</span>
+
+                                                        <span aria-hidden="true">9</span>
+                                                    </td>
+                                                </tr>
+                                                <tr data-region="month-view-week">
+                                                    <td class="day text-center" data-day-timestamp="1741564800"><span
+                                                            class="sr-only">Sem eventos, Segunda, 10 de Março</span>
+
+                                                        <span aria-hidden="true">10</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1741651200"><span
+                                                            class="sr-only">Sem eventos, Terça, 11 de Março</span>
+
+                                                        <span aria-hidden="true">11</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1741737600"><span
+                                                            class="sr-only">Sem eventos, Quarta, 12 de Março</span>
+
+                                                        <span aria-hidden="true">12</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1741824000"><span
+                                                            class="sr-only">Sem eventos, Quinta, 13 de Março</span>
+
+                                                        <span aria-hidden="true">13</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1741910400"><span
+                                                            class="sr-only">Sem eventos, Sexta, 14 de Março</span>
+
+                                                        <span aria-hidden="true">14</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1741996800">
+                                                        <span class="sr-only">Sem eventos, Sábado, 15 de Março</span>
+
+                                                        <span aria-hidden="true">15</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1742083200">
+                                                        <span class="sr-only">Sem eventos, Domingo, 16 de Março</span>
+
+                                                        <span aria-hidden="true">16</span>
+                                                    </td>
+                                                </tr>
+                                                <tr data-region="month-view-week">
+                                                    <td class="day text-center" data-day-timestamp="1742169600"><span
+                                                            class="sr-only">Sem eventos, Segunda, 17 de Março</span>
+
+                                                        <span aria-hidden="true">17</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1742256000"><span
+                                                            class="sr-only">Sem eventos, Terça, 18 de Março</span>
+
+                                                        <span aria-hidden="true">18</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1742342400"><span
+                                                            class="sr-only">Sem eventos, Quarta, 19 de Março</span>
+
+                                                        <span aria-hidden="true">19</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1742428800"><span
+                                                            class="sr-only">Sem eventos, Quinta, 20 de Março</span>
+
+                                                        <span aria-hidden="true">20</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1742515200"><span
+                                                            class="sr-only">Sem eventos, Sexta, 21 de Março</span>
+
+                                                        <span aria-hidden="true">21</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1742601600">
+                                                        <span class="sr-only">Sem eventos, Sábado, 22 de Março</span>
+
+                                                        <span aria-hidden="true">22</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1742688000">
+                                                        <span class="sr-only">Sem eventos, Domingo, 23 de Março</span>
+
+                                                        <span aria-hidden="true">23</span>
+                                                    </td>
+                                                </tr>
+                                                <tr data-region="month-view-week">
+                                                    <td class="day text-center" data-day-timestamp="1742774400"><span
+                                                            class="sr-only">Sem eventos, Segunda, 24 de Março</span>
+
+                                                        <span aria-hidden="true">24</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1742860800"><span
+                                                            class="sr-only">Sem eventos, Terça, 25 de Março</span>
+
+                                                        <span aria-hidden="true">25</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1742947200"><span
+                                                            class="sr-only">Sem eventos, Quarta, 26 de Março</span>
+
+                                                        <span aria-hidden="true">26</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1743033600"><span
+                                                            class="sr-only">Sem eventos, Quinta, 27 de Março</span>
+
+                                                        <span aria-hidden="true">27</span>
+                                                    </td>
+                                                    <td class="day text-center" data-day-timestamp="1743120000"><span
+                                                            class="sr-only">Sem eventos, Sexta, 28 de Março</span>
+
+                                                        <span aria-hidden="true">28</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1743206400">
+                                                        <span class="sr-only">Sem eventos, Sábado, 29 de Março</span>
+
+                                                        <span aria-hidden="true">29</span>
+                                                    </td>
+                                                    <td class="day text-center weekend" data-day-timestamp="1743292800">
+                                                        <span class="sr-only">Sem eventos, Domingo, 30 de Março</span>
+
+                                                        <span aria-hidden="true">30</span>
+                                                    </td>
+                                                </tr>
+                                                <tr data-region="month-view-week">
+                                                    <td class="day text-center" data-day-timestamp="1743375600"><span
+                                                            class="sr-only">Sem eventos, Segunda, 31 de Março</span>
+
+                                                        <span aria-hidden="true">31</span>
+                                                    </td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                    <td class="dayblank">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="footer"></div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <span id="sb-6"></span>
+                </aside>
+            </div>
+
+            <div class="footerlinks">
+                <div class="row-fluid">
+                    <p class="helplink"></p>
+                    <div class="footnote">
+                        <p dir="ltr" style="text-align:left;"> © 2020| MARFORMAR | <a href="https://www.marformar.pt"
+                                class="_blanktarget">www.marformar.pt</a> </p>
+                    </div>
+                </div>
+
+
+                <div class="socials row-fluid">
+
+                    <div class="span12">
+                        <div class="social_icons pull-right">
+                            <a class="social fab fa-facebook" href='https://www.facebook.com/MARFORMAR-149151162436112/'
+                                target='_blank'> </a> <a class="social fab fa-instagram"
+                                href='https://www.instagram.com/marformar_/' target='_blank'> </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="logininfo">Utilizador não autenticado (<a
+                    href="https://elearning.marformar.pt/login/index.php">Entrar</a>)</div>
+        </footer>
+
+    </div>
+    </div>
+    </div>
+    <script>$(window).on('load resize', function () {
+            if (window.matchMedia('(min-width: 980px)').matches) {
+                $('.navbar .dropdown').hover(function () {
+                    $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+                }, function () {
+                    $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+                });
+            } else { $('.dropdown-menu').removeAttr("style"); $('.navbar .dropdown').unbind('mouseenter mouseleave'); }
+        });
+
+        (function ($) {
+            $(document).ready(function () {
+
+                var offset = 220;
+                var duration = 500;
+                jQuery(window).scroll(function () {
+                    if (jQuery(this).scrollTop() > offset) {
+                        jQuery('.back-to-top').fadeIn(duration);
+                    } else {
+                        jQuery('.back-to-top').fadeOut(duration);
+                    }
+                });
+                jQuery('.back-to-top').click(function (event) {
+                    event.preventDefault();
+                    jQuery('html, body').animate({ scrollTop: 0 }, duration);
+                    return false;
+                });
+
+                $(document).on('click', 'button[data-toggle="dropdown"]', function (event) {
+                    event.preventDefault();
+                    $(this).next('.dropdown-menu').slideToggle("fast");
+                });
+                $(document).on('click', 'a[data-toggle="dropdown"]', function (event) {
+                    event.preventDefault();
+                    $(this).next('.dropdown-menu').slideToggle("fast");
+                });
+                $(document).on('click', function (e) {
+                    if (!$('button[data-toggle="dropdown"]').is(e.target) && !$('button[data-toggle="dropdown"]').has(e.target).length && !$('a[data-toggle="dropdown"]').is(e.target) && !$('a[data-toggle="dropdown"]').has(e.target).length && !$(".atto_hasmenu").is(e.target)) {
+                        $('.dropdown .dropdown-menu:not(.lambda-login)').slideUp("fast");
+                    }
+                });
+                $(document).on('click', '.modchooser button[data-action="show-option-summary"]', function (event) {
+                    $('.carousel-item[data-region="modules"]').toggleClass("active");
+                    $('.carousel-item[data-region="help"]').toggleClass("active");
+                });
+                $(document).on('click', '.modchooser button.closeoptionsummary ', function (event) {
+                    $('.carousel-item[data-region="modules"]').toggleClass("active");
+                    $('.carousel-item[data-region="help"]').toggleClass("active");
+                });
+
+            });
+        })(jQuery);
+
+
+        var togglesidebar = function () {
+            var sidebar_open = Y.one('body').hasClass('sidebar-open');
+            if (sidebar_open) {
+                Y.one('body').removeClass('sidebar-open');
+                M.util.set_user_preference('theme_lambda_sidebar', 'sidebar-closed');
+            } else {
+                Y.one('body').addClass('sidebar-open');
+                M.util.set_user_preference('theme_lambda_sidebar', 'sidebar-open');
+            }
+        };
+
+        M.theme_lambda = M.theme_lambda || {};
+        M.theme_lambda.sidebar = {
+            init: function () {
+                Y.one('body').delegate('click', togglesidebar, '#sidebar-btn');
+            }
+        };</script>
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                $('#camera_wrap').camera({
+                    fx: 'curtainBottomLeft',
+                    height: 'auto',
+                    loader: 'bar',
+                    thumbnails: false,
+                    pagination: false,
+                    autoAdvance: true,
+                    hover: false,
+                    navigationHover: true,
+                    mobileNavHover: true,
+                    opacityOnGrid: false
+                });
+            });
+        })(jQuery);
+    </script>
+    <script>
+        var require = {
+            baseUrl: 'https://elearning.marformar.pt/lib/requirejs.php/1607956216/',
+            enforceDefine: true,
+            skipDataMain: true,
+            waitSeconds: 0,
+
+            paths: {
+                jquery: 'https://elearning.marformar.pt/lib/javascript.php/1607956216/lib/jquery/jquery-3.4.1.min',
+                jqueryui: 'https://elearning.marformar.pt/lib/javascript.php/1607956216/lib/jquery/ui-1.12.1/jquery-ui.min',
+                jqueryprivate: 'https://elearning.marformar.pt/lib/javascript.php/1607956216/lib/requirejs/jquery-private'
+            },
+            map: {
+                '*': { jquery: 'jqueryprivate' },
+                '*': { process: 'core/first' },
+
+                jqueryprivate: { jquery: 'jquery' }
+            }
+        };
+
+    </script>
+    <script src="https://elearning.marformar.pt/lib/javascript.php/1607956216/lib/requirejs/require.min.js"></script>
+    <script>
+        M.util.js_pending("core/first"); require(['core/first'], function () {
+            require(['core/prefetch']);
+            ;
+            require(["media_videojs/loader"], function (loader) {
+                loader.setUp(function (videojs) {
+                    videojs.options.flash.swf = "https://elearning.marformar.pt/media/player/videojs/videojs/video-js.swf";
+                    videojs.addLanguage('pt-BR', {
+                        "Audio Player": "Reprodutor de áudio",
+                        "Video Player": "Reprodutor de vídeo",
+                        "Play": "Tocar",
+                        "Pause": "Pausar",
+                        "Replay": "Tocar novamente",
+                        "Current Time": "Tempo",
+                        "Duration": "Duração",
+                        "Remaining Time": "Tempo Restante",
+                        "Stream Type": "Tipo de Stream",
+                        "LIVE": "AO VIVO",
+                        "Loaded": "Carregado",
+                        "Progress": "Progresso",
+                        "Progress Bar": "Barra de progresso",
+                        "progress bar timing: currentTime={1} duration={2}": "{1} de {2}",
+                        "Fullscreen": "Tela Cheia",
+                        "Non-Fullscreen": "Tela Normal",
+                        "Mute": "Mudo",
+                        "Unmute": "Habilitar Som",
+                        "Playback Rate": "Velocidade",
+                        "Subtitles": "Legendas",
+                        "subtitles off": "Sem Legendas",
+                        "Captions": "Anotações",
+                        "captions off": "Sem Anotações",
+                        "Chapters": "Capítulos",
+                        "Descriptions": "Descrições",
+                        "descriptions off": "sem descrições",
+                        "Audio Track": "Faixa de áudio",
+                        "Volume Level": "Nível de volume",
+                        "You aborted the media playback": "Você parou a execução do vídeo.",
+                        "A network error caused the media download to fail part-way.": "Um erro na rede causou falha durante o download da mídia.",
+                        "The media could not be loaded, either because the server or network failed or because the format is not supported.": "A mídia não pode ser carregada, por uma falha de rede ou servidor ou o formato não é suportado.",
+                        "No compatible source was found for this media.": "Nenhuma fonte foi encontrada para esta mídia.",
+                        "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "A reprodução foi interrompida devido à um problema de mídia corrompida ou porque a mídia utiliza funções que seu navegador não suporta.",
+                        "The media is encrypted and we do not have the keys to decrypt it.": "A mídia está criptografada e não temos as chaves para descriptografar.",
+                        "Play Video": "Tocar Vídeo",
+                        "Close": "Fechar",
+                        "Close Modal Dialog": "Fechar Diálogo Modal",
+                        "Modal Window": "Janela Modal",
+                        "This is a modal window": "Isso é uma janela-modal",
+                        "This modal can be closed by pressing the Escape key or activating the close button.": "Esta janela pode ser fechada pressionando a tecla de Escape.",
+                        ", opens captions settings dialog": ", abre as configurações de legendas de comentários",
+                        ", opens subtitles settings dialog": ", abre as configurações de legendas",
+                        ", opens descriptions settings dialog": ", abre as configurações",
+                        ", selected": ", selecionada",
+                        "captions settings": "configurações de legendas de comentários",
+                        "subtitles settings": "configurações de legendas",
+                        "descriptions settings": "configurações das descrições",
+                        "Text": "Texto",
+                        "White": "Branco",
+                        "Black": "Preto",
+                        "Red": "Vermelho",
+                        "Green": "Verde",
+                        "Blue": "Azul",
+                        "Yellow": "Amarelo",
+                        "Magenta": "Magenta",
+                        "Cyan": "Ciano",
+                        "Background": "Plano-de-Fundo",
+                        "Window": "Janela",
+                        "Transparent": "Transparente",
+                        "Semi-Transparent": "Semi-Transparente",
+                        "Opaque": "Opaco",
+                        "Font Size": "Tamanho da Fonte",
+                        "Text Edge Style": "Estilo da Borda",
+                        "None": "Nenhum",
+                        "Raised": "Elevado",
+                        "Depressed": "Acachapado",
+                        "Uniform": "Uniforme",
+                        "Dropshadow": "Sombra de projeção",
+                        "Font Family": "Família da Fonte",
+                        "Proportional Sans-Serif": "Sans-Serif(Sem serifa) Proporcional",
+                        "Monospace Sans-Serif": "Sans-Serif(Sem serifa) Monoespaçada",
+                        "Proportional Serif": "Serifa Proporcional",
+                        "Monospace Serif": "Serifa Monoespaçada",
+                        "Casual": "Casual",
+                        "Script": "Script",
+                        "Small Caps": "Maiúsculas Pequenas",
+                        "Reset": "Redefinir",
+                        "restore all settings to the default values": "restaurar todas as configurações aos valores padrão",
+                        "Done": "Salvar",
+                        "Caption Settings Dialog": "Caíxa-de-Diálogo das configurações de Legendas",
+                        "Beginning of dialog window. Escape will cancel and close the window.": "Iniciando a Janela-de-Diálogo. Pressionar Escape irá cancelar e fechar a janela.",
+                        "End of dialog window.": "Fim da Janela-de-Diálogo",
+                        "{1} is loading.": "{1} está carregando."
+                    });
+
+                });
+            });;
+            M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function (amd) { amd.init("20", null); M.util.js_complete('block_settings/settingsblock'); });;
+
+            require(['jquery'], function ($) {
+                require(['theme_boost/bootstrap/popover'], function () {
+                    var target = $("#calendar-day-popover-link-1-2025-63-67c820c5d90ae67c820c5d90b11");
+                    target.popover({
+                        content: function () {
+                            var source = target.next().find("> *:not('.hidden')");
+                            var content = $('<div>');
+
+                            if (source.length) {
+                                content.html(source.clone(false));
+                            } else {
+                                content.html(target.data('alternate'));
+                            }
+
+                            return content.html();
+                        }
+                    });
+                });
+            });
+            ;
+
+            require([
+                'jquery',
+                'core_calendar/selectors',
+                'core_calendar/events',
+            ], function (
+                $,
+                CalendarSelectors,
+                CalendarEvents
+            ) {
+
+                $('body').on(CalendarEvents.filterChanged, function (e, data) {
+                    M.util.js_pending("month-mini-67c820c5d90ae67c820c5d90b11-filterChanged");
+                    $("#month-mini-2025-March-67c820c5d90ae67c820c5d90b11")
+                        .find(CalendarSelectors.popoverType[data.type])
+                        .toggleClass('hidden', !!data.hidden);
+                    M.util.js_complete("month-mini-67c820c5d90ae67c820c5d90b11-filterChanged");
+                });
+            });
+            ;
+
+            require(['jquery', 'core_calendar/calendar_mini'], function ($, CalendarMini) {
+                CalendarMini.init($("#calendar-month-2025-March-67c820c5d90ae67c820c5d90b11"), !1);
+            });
+            ;
+
+            require(['jquery', 'core/custom_interaction_events'], function ($, CustomEvents) {
+                CustomEvents.define('#single_select67c820c5d90b14', [CustomEvents.events.accessibleChange]);
+                $('#single_select67c820c5d90b14').on(CustomEvents.events.accessibleChange, function () {
+                    var ignore = $(this).find(':selected').attr('data-ignore');
+                    if (typeof ignore === typeof undefined) {
+                        $('#single_select_f67c820c5d90b13').submit();
+                    }
+                });
+            });
+            ;
+            M.util.js_pending('core/log'); require(['core/log'], function (amd) { amd.setConfig({ "level": "warn" }); M.util.js_complete('core/log'); });;
+            M.util.js_pending('core/page_global'); require(['core/page_global'], function (amd) { amd.init(); M.util.js_complete('core/page_global'); }); M.util.js_complete("core/first");
+        });
+    </script>
+    <script src="https://elearning.marformar.pt/theme/javascript.php/lambda/1607956216/footer"></script>
+    <script>
+        M.str = { "moodle": { "lastmodified": "\u00daltima altera\u00e7\u00e3o", "name": "Designa\u00e7\u00e3o", "error": "Erro", "info": "Informa\u00e7\u00e3o", "yes": "Sim", "no": "N\u00e3o", "cancel": "Cancelar", "morehelp": "Mais ajuda", "loadinghelp": "A carregar\u2026", "collapseall": "Contrair tudo", "expandall": "Expandir tudo", "confirm": "Confirma\u00e7\u00e3o", "areyousure": "Tem a certeza?", "closebuttontitle": "Fechar", "unknownerror": "Erro desconhecido", "file": "Ficheiro", "url": "URL" }, "repository": { "type": "Tipo", "size": "Tamanho", "invalidjson": "String JSON inv\u00e1lida", "nofilesattached": "Sem ficheiros selecionados", "filepicker": "Selecionar ficheiro", "logout": "Sair", "nofilesavailable": "N\u00e3o existem ficheiros dispon\u00edveis", "norepositoriesavailable": "Nenhum dos seus reposit\u00f3rios atuais pode devolver ficheiros no formato indicado.", "fileexistsdialogheader": "Ficheiro existente", "fileexistsdialog_editor": "Um ficheiro com esse nome j\u00e1 se encontra anexo ao texto que est\u00e1 a editar.", "fileexistsdialog_filemanager": "Um ficheiro com esse nome j\u00e1 se encontra anexo", "renameto": "Renomear para \"{$a}\"", "referencesexist": "Existem {$a} hiperliga\u00e7\u00f5es para este ficheiro", "select": "Selecionar" }, "admin": { "confirmdeletecomments": "Tem a certeza de que pretende apagar coment\u00e1rios?", "confirmation": "Confirma\u00e7\u00e3o" }, "debug": { "debuginfo": "Informa\u00e7\u00e3o de depura\u00e7\u00e3o", "line": "Linha", "stacktrace": "Stack trace" }, "langconfig": { "labelsep": ":&nbsp;" } };
+    </script>
+    <script>
+        (function () {
+            Y.use("moodle-filter_mathjaxloader-loader", function () {
+                M.filter_mathjaxloader.configure({ "mathjaxconfig": "\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n", "lang": "pt" });
+            });
+            M.util.help_popups.setup(Y);
+            Y.use("moodle-core-popuphelp", function () {
+                M.core.init_popuphelp();
+            });
+            Y.use("moodle-course-categoryexpander", function () {
+                Y.Moodle.course.categoryexpander.init();
+            });
+            M.util.js_pending('random67c820c5d90b15'); Y.on('domready', function () { M.util.js_complete("init"); M.util.js_complete('random67c820c5d90b15'); });
+        })();
+    </script>
+
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>
